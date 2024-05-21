@@ -250,6 +250,9 @@ kotlin {
 
         val wasmWasiTest by getting {
             dependsOn(pureKotlinTest)
+            dependencies {
+                runtimeOnly(project(":kotlinx-datetime-zoneinfo"))
+            }
         }
 
         val darwinMain by getting {
