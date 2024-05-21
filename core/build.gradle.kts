@@ -129,6 +129,10 @@ kotlin {
         }
     }
 
+    wasmWasi {
+        nodejs()
+    }
+
     @OptIn(ExperimentalKotlinGradlePluginApi::class)
     compilerOptions {
         freeCompilerArgs.add("-Xexpect-actual-classes")
