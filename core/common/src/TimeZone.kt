@@ -63,7 +63,7 @@ public expect open class TimeZone {
          *
          * If the current system time zone changes, this function can reflect this change on the next invocation.
          *
-         * Always return `UTC` timezone on the Wasm WASI platform due to the lack of support for retrieving system time zone information.
+         * Always returns the `UTC` timezone on the Wasm WASI platform due to the lack of support for retrieving system timezone information.
          *
          * @sample kotlinx.datetime.test.samples.TimeZoneSamples.currentSystemDefault
          */
