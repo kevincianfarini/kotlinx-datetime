@@ -95,8 +95,8 @@ public expect open class TimeZone {
          * @throws IllegalTimeZoneException if [zoneId] has an invalid format or a time-zone with the name [zoneId]
          * is not found.
          *
-         * @throws IllegalTimeZoneException within the Wasm WASI platform, which does not inherently support non-UTC time zones;
-         * to resolve this issue, please include a dependency on kotlinx-datetime-zoneinfo.
+         * @throws IllegalTimeZoneException on the Wasm WASI platform for non-fixed-offset time zones,
+         * unless a dependency on the `kotlinx-datetime-zoneinfo` artifact is added.
          *
          * @sample kotlinx.datetime.test.samples.TimeZoneSamples.constructorFunction
          */
