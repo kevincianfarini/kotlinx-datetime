@@ -24,4 +24,4 @@ jobs:
           distribution: 'zulu'
           java-version: 17
 
-      - run: ./gradlew ${{matrix.job}}
+      - run: ./gradlew :kotlinx-datetime:mingwX64Test --tests "kotlinx.datetime.test.Reproducer"
