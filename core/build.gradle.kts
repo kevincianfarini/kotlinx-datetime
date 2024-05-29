@@ -414,3 +414,11 @@ with(org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin.apply(rootPr
     nodeVersion = "21.0.0-v8-canary202309167e82ab1fa2"
     nodeDownloadBaseUrl = "https://nodejs.org/download/v8-canary"
 }
+
+tasks.withType<AbstractTestTask> {
+    testLogging {
+        exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+        showStandardStreams = true
+        showStackTraces = true
+    }
+}
